@@ -85,41 +85,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as? ProductTableViewCell else {
             return UITableViewCell()
         }
-        if indexPath.row == 0 {
-            if let url = URL(string: arrArrProductModel[indexPath.row][0].image) {
-                cell.imgFirst.sd_setImage(with: url, placeholderImage: UIImage(named: "Image"))
-            }
-            cell.lblFirstTitle.text = arrArrProductModel[indexPath.row][0].name
-            cell.lblFirstDesc.text  = arrArrProductModel[indexPath.row][0].desc
-            cell.lblFirstDesc.sizeToFit()
-            cell.imgStackView.isHidden = true
-            cell.imgFirst.isHidden = false
-        } else if (indexPath.row % 2 == 0) {
-            if let url = URL(string: arrArrProductModel[indexPath.row][0].image) {
-                cell.imgFirst.sd_setImage(with: url, placeholderImage: UIImage(named: "Image"))
-            }
-            cell.lblFirstTitle.text = arrArrProductModel[indexPath.row][0].name
-            cell.lblFirstDesc.text  = arrArrProductModel[indexPath.row][0].desc
-            cell.lblFirstDesc.sizeToFit()
-            cell.imgStackView.isHidden = true
-            cell.imgFirst.isHidden = false
-            print("First All Time:- \(arrArrProductModel[indexPath.row][0].image)")
-        } else {
-            if let url = URL(string: arrArrProductModel[indexPath.row][0].image) {
-                cell.imgSecond.sd_setImage(with: url, placeholderImage: UIImage(named: "Image"))
-            }
-            if let url = URL(string: arrArrProductModel[indexPath.row][1].image) {
-                cell.imgThird.sd_setImage(with: url, placeholderImage: UIImage(named: "Image"))
-            }
-            cell.lblSecondTitle.text = arrArrProductModel[indexPath.row][0].name
-            cell.lblThirdTitle.text = arrArrProductModel[indexPath.row][1].name
-            print(arrArrProductModel[indexPath.row][0].image)
-            print(arrArrProductModel[indexPath.row][1].image)
-            cell.imgFirst.isHidden = true
-            cell.imgStackView.isHidden = false
-            cell.lblFirstTitle.isHidden = true
-            cell.lblFirstDesc.isHidden = true
-        }
+        cell.setData(row: indexPath.row)
         return cell
     }
     
