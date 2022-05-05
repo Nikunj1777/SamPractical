@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DEBB552CAD8E124B1C53DE7 /* Pods_SamPractical.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087E18183E366D63A3F59459 /* Pods_SamPractical.framework */; };
+		38375B992821AF9400D42F28 /* ProductDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38375B982821AF9400D42F28 /* ProductDataModel.swift */; };
+		38A061DE2821AE3A007531AD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A061DD2821AE3A007531AD /* DataModel.swift */; };
+		38FD91A22821315E001C9E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD91A12821315E001C9E2E /* AppDelegate.swift */; };
+		38FD91A62821315E001C9E2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD91A52821315E001C9E2E /* ViewController.swift */; };
+		38FD91A92821315E001C9E2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FD91A72821315E001C9E2E /* Main.storyboard */; };
+		38FD91AC2821315E001C9E2E /* SamPractical.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38FD91AA2821315E001C9E2E /* SamPractical.xcdatamodeld */; };
+		38FD91AE28213163001C9E2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FD91AD28213163001C9E2E /* Assets.xcassets */; };
+		38FD91B128213163001C9E2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FD91AF28213163001C9E2E /* LaunchScreen.storyboard */; };
+		38FD91B9282131DB001C9E2E /* CommonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD91B8282131DB001C9E2E /* CommonFunction.swift */; };
+		38FD91BB28213206001C9E2E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD91BA28213206001C9E2E /* APIManager.swift */; };
+		38FD91BD28213CC2001C9E2E /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD91BC28213CC2001C9E2E /* ProductTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		087E18183E366D63A3F59459 /* Pods_SamPractical.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SamPractical.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38375B982821AF9400D42F28 /* ProductDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataModel.swift; sourceTree = "<group>"; };
+		38A061DD2821AE3A007531AD /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		38FD919E2821315E001C9E2E /* SamPractical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamPractical.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38FD91A12821315E001C9E2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		38FD91A52821315E001C9E2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		38FD91A82821315E001C9E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		38FD91AB2821315E001C9E2E /* SamPractical.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SamPractical.xcdatamodel; sourceTree = "<group>"; };
+		38FD91AD28213163001C9E2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38FD91B028213163001C9E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		38FD91B228213163001C9E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38FD91B8282131DB001C9E2E /* CommonFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunction.swift; sourceTree = "<group>"; };
+		38FD91BA28213206001C9E2E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		38FD91BC28213CC2001C9E2E /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		AB788266711A24F9F7C1C060 /* Pods-SamPractical.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamPractical.release.xcconfig"; path = "Target Support Files/Pods-SamPractical/Pods-SamPractical.release.xcconfig"; sourceTree = "<group>"; };
+		C99DA5DDD2943FA2884E9DDF /* Pods-SamPractical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamPractical.debug.xcconfig"; path = "Target Support Files/Pods-SamPractical/Pods-SamPractical.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38FD919B2821315E001C9E2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DEBB552CAD8E124B1C53DE7 /* Pods_SamPractical.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		366E1A82CA13046C9B851DE0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C99DA5DDD2943FA2884E9DDF /* Pods-SamPractical.debug.xcconfig */,
+				AB788266711A24F9F7C1C060 /* Pods-SamPractical.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		38FD91952821315E001C9E2E = {
+			isa = PBXGroup;
+			children = (
+				38FD91A02821315E001C9E2E /* SamPractical */,
+				38FD919F2821315E001C9E2E /* Products */,
+				366E1A82CA13046C9B851DE0 /* Pods */,
+				B2D5DCC7572254B6FC2DAE9E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		38FD919F2821315E001C9E2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38FD919E2821315E001C9E2E /* SamPractical.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38FD91A02821315E001C9E2E /* SamPractical */ = {
+			isa = PBXGroup;
+			children = (
+				38FD91A12821315E001C9E2E /* AppDelegate.swift */,
+				38FD91A52821315E001C9E2E /* ViewController.swift */,
+				38FD91BC28213CC2001C9E2E /* ProductTableViewCell.swift */,
+				38FD91B8282131DB001C9E2E /* CommonFunction.swift */,
+				38375B982821AF9400D42F28 /* ProductDataModel.swift */,
+				38FD91BA28213206001C9E2E /* APIManager.swift */,
+				38A061DD2821AE3A007531AD /* DataModel.swift */,
+				38FD91A72821315E001C9E2E /* Main.storyboard */,
+				38FD91AD28213163001C9E2E /* Assets.xcassets */,
+				38FD91AF28213163001C9E2E /* LaunchScreen.storyboard */,
+				38FD91B228213163001C9E2E /* Info.plist */,
+				38FD91AA2821315E001C9E2E /* SamPractical.xcdatamodeld */,
+			);
+			path = SamPractical;
+			sourceTree = "<group>";
+		};
+		B2D5DCC7572254B6FC2DAE9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				087E18183E366D63A3F59459 /* Pods_SamPractical.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38FD919D2821315E001C9E2E /* SamPractical */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38FD91B528213163001C9E2E /* Build configuration list for PBXNativeTarget "SamPractical" */;
+			buildPhases = (
+				3CFEEC25775BCB58B3558CE8 /* [CP] Check Pods Manifest.lock */,
+				38FD919A2821315E001C9E2E /* Sources */,
+				38FD919B2821315E001C9E2E /* Frameworks */,
+				38FD919C2821315E001C9E2E /* Resources */,
+				5C4E676925B999FA8EA69218 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SamPractical;
+			productName = SamPractical;
+			productReference = 38FD919E2821315E001C9E2E /* SamPractical.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38FD91962821315E001C9E2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					38FD919D2821315E001C9E2E = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 38FD91992821315E001C9E2E /* Build configuration list for PBXProject "SamPractical" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38FD91952821315E001C9E2E;
+			productRefGroup = 38FD919F2821315E001C9E2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38FD919D2821315E001C9E2E /* SamPractical */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38FD919C2821315E001C9E2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38FD91B128213163001C9E2E /* LaunchScreen.storyboard in Resources */,
+				38FD91AE28213163001C9E2E /* Assets.xcassets in Resources */,
+				38FD91A92821315E001C9E2E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CFEEC25775BCB58B3558CE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SamPractical-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C4E676925B999FA8EA69218 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SamPractical/Pods-SamPractical-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SamPractical/Pods-SamPractical-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SamPractical/Pods-SamPractical-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38FD919A2821315E001C9E2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38375B992821AF9400D42F28 /* ProductDataModel.swift in Sources */,
+				38FD91BD28213CC2001C9E2E /* ProductTableViewCell.swift in Sources */,
+				38FD91A62821315E001C9E2E /* ViewController.swift in Sources */,
+				38FD91AC2821315E001C9E2E /* SamPractical.xcdatamodeld in Sources */,
+				38FD91BB28213206001C9E2E /* APIManager.swift in Sources */,
+				38A061DE2821AE3A007531AD /* DataModel.swift in Sources */,
+				38FD91B9282131DB001C9E2E /* CommonFunction.swift in Sources */,
+				38FD91A22821315E001C9E2E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		38FD91A72821315E001C9E2E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38FD91A82821315E001C9E2E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		38FD91AF28213163001C9E2E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38FD91B028213163001C9E2E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38FD91B328213163001C9E2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		38FD91B428213163001C9E2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38FD91B628213163001C9E2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C99DA5DDD2943FA2884E9DDF /* Pods-SamPractical.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SamPractical/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Practical.SamPractical;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38FD91B728213163001C9E2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB788266711A24F9F7C1C060 /* Pods-SamPractical.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SamPractical/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Practical.SamPractical;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38FD91992821315E001C9E2E /* Build configuration list for PBXProject "SamPractical" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38FD91B328213163001C9E2E /* Debug */,
+				38FD91B428213163001C9E2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38FD91B528213163001C9E2E /* Build configuration list for PBXNativeTarget "SamPractical" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38FD91B628213163001C9E2E /* Debug */,
+				38FD91B728213163001C9E2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		38FD91AA2821315E001C9E2E /* SamPractical.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				38FD91AB2821315E001C9E2E /* SamPractical.xcdatamodel */,
+			);
+			currentVersion = 38FD91AB2821315E001C9E2E /* SamPractical.xcdatamodel */;
+			path = SamPractical.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 38FD91962821315E001C9E2E /* Project object */;
+}
