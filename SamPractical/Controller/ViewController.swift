@@ -24,7 +24,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setDataIntoDataModel()
+        if Common.networkAvailability() {
+            self.setDataIntoDataModel()
+        } else {
+            Common.showAlert(title: "You're offline", message: "Please turn on your internet")
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -87,6 +91,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             }
             cell.lblFirstTitle.text = arrArrProductModel[indexPath.row][0].name
             cell.lblFirstDesc.text  = arrArrProductModel[indexPath.row][0].desc
+            cell.lblFirstDesc.sizeToFit()
             cell.imgStackView.isHidden = true
             cell.imgFirst.isHidden = false
         } else if (indexPath.row % 2 == 0) {
@@ -95,6 +100,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             }
             cell.lblFirstTitle.text = arrArrProductModel[indexPath.row][0].name
             cell.lblFirstDesc.text  = arrArrProductModel[indexPath.row][0].desc
+            cell.lblFirstDesc.sizeToFit()
             cell.imgStackView.isHidden = true
             cell.imgFirst.isHidden = false
             print("First All Time:- \(arrArrProductModel[indexPath.row][0].image)")
@@ -118,7 +124,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170
+        return 150
     }
 }
 
@@ -145,30 +151,34 @@ extension ViewController {
     }
     
     func callAPIForProducts(completionHandler: @escaping (Bool) -> Void) {
-        ApiManager.callRequest(user_api, withParameters: [:], header: [:], requestTimeOut: 60) { result in
-            if let data = result as? [[String: Any]] {
-                print(data)
-                if data.count > 0 {
-                    for user in data {
-                        if let desc = user["ShortDescription"] as? String, let name = user["Name"] as? String {
-                            if let dic = user["ProductPictures"] as? [[String: Any]], dic.count > 0 {
-                                if let dicimg = dic[0] as? [String: Any], let imgUrl = dicimg["PictureUrl"] as? String {
-                                    arrProductModel.append(ProductDataModel(name: name, image: imgUrl, desc: desc))
+        if Common.networkAvailability() {
+            ApiManager.callRequest(user_api, withParameters: [:], header: [:], requestTimeOut: 60) { result in
+                if let data = result as? [[String: Any]] {
+                    print(data)
+                    if data.count > 0 {
+                        for user in data {
+                            if let desc = user["ShortDescription"] as? String, let name = user["Name"] as? String {
+                                if let dic = user["ProductPictures"] as? [[String: Any]], dic.count > 0 {
+                                    if let dicimg = dic[0] as? [String: Any], let imgUrl = dicimg["PictureUrl"] as? String {
+                                        arrProductModel.append(ProductDataModel(name: name, image: imgUrl, desc: desc))
+                                    }
                                 }
+                                
                             }
-                            
                         }
+                        completionHandler(true)
+                    } else {
+                        completionHandler(false)
                     }
-                    completionHandler(true)
                 } else {
                     completionHandler(false)
                 }
-            } else {
+            } failure: { error in
+                print(error.localizedDescription)
                 completionHandler(false)
             }
-        } failure: { error in
-            print(error.localizedDescription)
-            completionHandler(false)
+        } else {
+            Common.showAlert(title: "You're offline", message: "Please turn on your internet")
         }
     }
 }
